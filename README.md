@@ -8,9 +8,7 @@ A requirements file is in this repository so you can create a virtual environmen
 
 ## Example
 ```
-(.ve3) $:~/highs-ipm-debugging$ gzip -d A.csv.gz 
-(.ve3) $:~/highs-ipm-debugging$ gzip -d b.csv.gz 
-(.ve3) $:~/highs-ipm-debugging$ ./run_solver.py 
+(.ve3) ubuntu@desktop:~/highs-ipm-debugging$ ./run_solver.py 
 n_a: 10009
 n_u: 8448
 ./run_solver.py:27: OptimizeWarning: Sparse constraint matrix detected; setting 'sparse':True.
