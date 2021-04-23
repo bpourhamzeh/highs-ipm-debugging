@@ -11,7 +11,7 @@ OPTIMALITY_TOL = 1e-8
 
 def load(fn_A='A.csv', fn_b='b.csv'):
     A = csc_matrix(pd.read_csv(fn_A).to_numpy(dtype=np.int8))
-    b = pd.read_csv(fn_b).to_numpy().flatten()
+    b = pd.read_csv(fn_b).to_numpy(dtype=np.int32).flatten()
     
     n_a = A.shape[0] // 2
     n_u = A.shape[1] - n_a
