@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import pandas as pd
 import numpy as np
 from scipy.optimize import linprog
 from scipy.sparse import csc_matrix
@@ -9,9 +8,9 @@ FEASIBILITY_TOL = 1e-7
 OPTIMALITY_TOL = 1e-8
 
 
-def load(fn_A='A.csv', fn_b='b.csv'):
-    A = csc_matrix(pd.read_csv(fn_A).to_numpy(dtype=np.int8))
-    b = pd.read_csv(fn_b).to_numpy(dtype=np.int32).flatten()
+def load(fn_A="A.csv.gz", fn_b="b.csv.gz"):
+    A = csc_matrix(np.loadtxt(fn_A, dtype=np.int8, delimiter=","))
+    b = np.loadtxt(fn_b, dtype=np.int32, delimiter=",").flatten()
     
     n_a = A.shape[0] // 2
     n_u = A.shape[1] - n_a

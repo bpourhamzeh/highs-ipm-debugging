@@ -1,11 +1,6 @@
 # highs-ipm-debugging
 
-To run the script, first decompress the datasets
-```
-gzip -d A.csv.gz
-gzip -d b.csv.gz
-```
-Then run
+To run the script, execute
 ```
 ./run_solver.py
 ```
