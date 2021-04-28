@@ -83,3 +83,10 @@ Message: HiGHS Status Code 0: HighsModelStatusNOTSET
 Iterations: 0
 No solutions available: True
 ```
+
+## Data legend
+| File number      | Description |
+| ----------- | ----------- |
+| 1      | highs-ipm: Crossover failed; highs-ds: successful       |
+| 2   | highs-ipm: Infinite loop with default tolerances; succecss with lowered tolerances        |
+| 3  | highs-ipm: Crossover failed when feasibility_tolerance=1e-6 and optimality_tolerance=1e-7, success when feasibility_tolerance=1e-7 and optimality_tolerance=1e-8 |
