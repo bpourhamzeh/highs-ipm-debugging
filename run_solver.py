@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import json
+
 import numpy as np
 from scipy.optimize import linprog
 from scipy.sparse import csc_matrix
@@ -9,6 +11,7 @@ OPTIMALITY_TOL = 1e-7
 
 
 def load(fn_A="data/A3.csv.gz", fn_b="data/b3.csv.gz"):
+    print('Loading files:', fn_A, fn_b)
     A = csc_matrix(np.loadtxt(fn_A, dtype=np.int8, delimiter=","))
     b = np.loadtxt(fn_b, dtype=np.int32, delimiter=",").flatten()
     
@@ -23,6 +26,13 @@ def load(fn_A="data/A3.csv.gz", fn_b="data/b3.csv.gz"):
 
 if __name__ == "__main__":
     A, b, c = load()
+    options = {
+        "disp": True,
+        "dual_feasibility_tolerance": FEASIBILITY_TOL,
+        "primal_feasibility_tolerance": FEASIBILITY_TOL,
+        "ipm_optimality_tolerance": OPTIMALITY_TOL,
+    }
+    print('Using options:\n', json.dumps(options, indent=4))
     res = linprog(
         c,
         A_ub=A,
