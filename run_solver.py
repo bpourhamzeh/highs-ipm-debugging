@@ -6,11 +6,11 @@ from scipy.optimize import linprog
 from scipy.sparse import csc_matrix
 
 LINPROG_METHOD = "highs-ipm"
-FEASIBILITY_TOL = 1e-6
-OPTIMALITY_TOL = 1e-7
+FEASIBILITY_TOL = 1e-7
+OPTIMALITY_TOL = 1e-8
 
 
-def load(fn_A="data/A3.csv.gz", fn_b="data/b3.csv.gz"):
+def load(fn_A="data/A4.csv.gz", fn_b="data/b4.csv.gz"):
     print('Loading files:', fn_A, fn_b)
     A = csc_matrix(np.loadtxt(fn_A, dtype=np.int8, delimiter=","))
     b = np.loadtxt(fn_b, dtype=np.int32, delimiter=",").flatten()
