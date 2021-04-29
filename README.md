@@ -100,4 +100,4 @@ No solutions available: True
 | 1           | highs-ipm: Crossover failed; highs-ds: successful |
 | 2           | highs-ipm: Infinite loop with default tolerances; success with lowered tolerances |
 | 3           | highs-ipm: Crossover failed when feasibility_tolerance=1e-6 and optimality_tolerance=1e-7, success when feasibility_tolerance=1e-7 and optimality_tolerance=1e-8 |
-| 4           | highs-ipm: Crossover failed, all rows of A are inearly independent |
+| 4           | highs-ipm: Crossover failed when feasibility_tolerance=1e-7 and optimality_tolerance=1e-8, success when feasibility_tolerance=1e-8 and optimality_tolerance=1e-9, all rows of A are inearly independent |
